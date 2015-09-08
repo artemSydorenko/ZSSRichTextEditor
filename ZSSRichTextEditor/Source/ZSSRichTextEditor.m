@@ -185,7 +185,7 @@ static Class hackishFixClass = Nil;
     [self buildToolbar];
     
     if (!self.resourcesLoaded) {
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSBundle *bundle = [NSBundle bundleForClass:[ZSSRichTextEditor class]];
         NSString *filePath = [bundle pathForResource:@"editor" ofType:@"html"];
         NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
         NSString *htmlString = [[NSString alloc] initWithData:htmlData encoding:NSUTF8StringEncoding];
@@ -1345,7 +1345,7 @@ static Class hackishFixClass = Nil;
 #pragma mark - Grab Image From Pod Bundle
 
 - (UIImage *)bundledImageNamed:(NSString*)name {
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSBundle *bundle = [NSBundle bundleForClass:[ZSSRichTextEditor class]];
     return [UIImage imageNamed:name inBundle:bundle compatibleWithTraitCollection:nil];
 }
 

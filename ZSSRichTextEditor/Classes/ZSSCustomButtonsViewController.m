@@ -41,7 +41,8 @@
     [self addCustomToolbarItemWithButton:myButton];
     
     // Custom image button
-    ZSSBarButtonItem *item = [[ZSSBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ZSSinsertkeyword.png"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapCustomToolbarButton:)];
+    UIImage *image = [UIImage imageNamed:@"ZSSinsertkeyword.png" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+    ZSSBarButtonItem *item = [[ZSSBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(didTapCustomToolbarButton:)];
     [self addCustomToolbarItem:item];
     
 }
